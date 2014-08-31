@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{anysize}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{relsize}
+\usepackage{float}
+\usepackage{algpseudocode}
+\usepackage[hyphens]{url}
+
+\usepackage{color,hyperref}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{fontspec}
+
+\linespread{1.5}
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+        linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=black,citecolor=black}
+
+\def\name{Grigorios Lyras}
+\def\IF{\textbf{if}}
+\def\THEN{\textbf{then}}
+\def\SAYS{\textbf{says}}
+\def\SPEAKSFOR{$\Rightarrow$}
+\def\FOR{\textbf{for}}
+\def\AND{\textbf{and}}
+
+\setlength{\headheight}{15.2pt}
+
+\pagestyle{fancy}{ %
+    \fancyhf{} % remove everything
+    \renewcommand{\headrulewidth}{0pt} % remove lines as well
+    \renewcommand{\footrulewidth}{0.5pt}
+    \lfoot{dronekeys}
+    \rfoot{Page \thepage\ of \pageref{LastPage}}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
+\setmainfont[Mapping=TeX-text]{CMU Serif}
