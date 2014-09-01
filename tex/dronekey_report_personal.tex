@@ -22,6 +22,7 @@ them. The interaction with the rest of the team members and the task
 distribution will also be reported. In the final section I will present my own
 contribution to the project.
 
+\section{Project Overview}
 Wireless Sensor Networks are systems of sensors distributed over an area in
 order to collect useful information. These are low cost devices with limitations
 in their capabilities. One of these limitations is the communication range. As a
@@ -35,19 +36,28 @@ UAVs have unique mobility abilities which make them a very suitable solution
 for data muling.
 
 Since the suitability of UAVs for the task is established we move to the
-implementation. One of the factors that increase the risk significantly in this
-researh area is the cost of the UAVs as well as the dangers they impose to
-the nearby environment. This danger dictates that the behaviour and performane of
-UAVs needs to be tested thoroughly and the high cost makes field testing
-unsuitable for this researh area.
+implementation. In order to ensure that UAVs behave in a safe manner thorough
+testing is required. However this is not always possible due to weather
+conditions. Another factor that increases the risk significantly in this
+researh area is the cost of the UAVs the nearby environment. The high cost
+makes field testing unsuitable for this researh area. As a consequence the
+researh has foused on simulating UAVs in order to reduce the risk mentioned
+above.
 
 The initial idea for this project was the exploration of path planning
 algorithms for UAVs when they are used to collect data from distributed wireless
-sensor networks. Such networks appear more and more often in the industry mainly
-because of their lower cost
-The focus of this project has been the exploration of path planning algorithms.
-More specifically
-Simulation of such algorithms
+sensor networks. Due to the limitations and risk involved in suh a projet if it
+is taken on the field the exploration was limited to a simulated environment.
+After researching the area we focused on a simulator that enables the physical
+simulation of UAVs. CRATES was the simulator we used for this project which
+lacked support for modeling the wireless channel.
+
+We identified the areas where the projet would contribute to. This project set
+to build a radio propagation model for CRATES and utilise this in order to
+explore higher level Path Planning Algorithms. These were to be evaluated on
+their performance based on distance and data colletion statistics.
+
+
 
 \section{Objectives and Achievements}
 One of the most challenging aspects of this project has been it's wide scope. It
