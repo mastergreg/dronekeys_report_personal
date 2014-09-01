@@ -13,9 +13,9 @@ The aim of this report is the discussion of the Group Project that I took part
 in as part of the NCS team, comprised of myself and Seng Jea Lee, Johann Mifsud,
 Minmin Zhang. In this report I will present my own role in the progress of
 the project. The analysis will be broken into three main sections. In objectives
-and achievements I will present the objectives we set through the duration of
+and achievements, I will present the objectives we set through the duration of
 the project as well as the achievements and my contribution to them. Moving to
-the results of the project we will discuss the output of the project as well as
+the results of the project, we will discuss the output of the project as well as
 the quality of the outcome. In the third section, I will present my view on the
 project management techniques and tools that we used along with my experience on
 them. The interaction with the rest of the team members and the task
@@ -27,7 +27,7 @@ Wireless Sensor Networks are systems of sensors distributed over an area in
 order to collect useful information. These are low cost devices with limitations
 in their capabilities. One of these limitations is the communication range. As a
 result it is understood that these networks are not always connected. A concept
-to overcome such difficulties is the use of data mules that visit these devices
+to overcome such difficulties, is the use of data mules that visit these devices
 and collect the data from them. These data mules are networked devices that are
 able to move from location to location, pick up the data, store them
 temporarily and then deliver them back to the base. An interesting area is the
@@ -47,7 +47,7 @@ above.
 The initial idea for this project was the exploration of path planning
 algorithms for UAVs when they are used to collect data from distributed wireless
 sensor networks. Due to the limitations and risk involved in such a project if it
-is taken on the field the exploration was limited to a simulated environment.
+is taken on the field, the exploration was limited to a simulated environment.
 After researching the area we focused on a simulator that enables the physical
 simulation of UAVs. CRATES was the simulator we used for this project which
 lacked support for modeling the wireless channel.
@@ -63,7 +63,7 @@ One of the most challenging aspects of this project has been it's wide scope. It
 is in effect a multi disciplinary project. The main objectives were the
 extension of CRATES in order to support wireless communication as well as
 the implementation and testing of path planning algorithms. However, these two
-main objectives were divided into multiple milestones along the progress of the
+main objectives were broken down into multiple milestones along the progress of the
 project.
 
 \subsection{Wireless Channel Modeling}
@@ -85,14 +85,14 @@ stack layers up to the internet protocol.
 In order to simulate the network stack layers we reused existing code. In
 particular we used ns2, a discrete event simulator, that executes TCL scripts at
 runtime. ns2 is a widely used simulator in research areas and supports multiple
-MAC layers. Alternatives to ns2 were considered, however, due to our previous
+MAC layers. Alternatives to ns2 were considered, however, our previous
 familiarity with ns2 was what led us to use ns2 for our project. In our
 implementation we run two simulators in parallel. We treat the ns2 simulation
 as a function call, pushing the input, waiting for a fixed amount of time and
 then parsing the result.
 
-In the area of wireless modeling we had to gather data for the network modules
-that were available on the real life platforms. To do that we created a
+In the area of wireless modelling we had to gather data for the network modules
+that were available on the real life platforms. To do that, we created a
 measurement platform using OrisenStamps and NVO8C GPS units that allowed us to
 measure wireless data as well as GPS coordinates. This way we could calculate
 the distances between the different platforms. These platforms were flown in the
@@ -120,7 +120,7 @@ wireless channel. In order to achieve this goal, initially we gathered wireless
 communication data for two different MAC protocols, ZigBee 802.15.4 and WiFi
 802.11g. For the ZigBee measurements we used a pair of OrisenStamps which exchanged
 packets. From these packets we extracted the receiver signal strength
-indication. In a similar manner we collected data for the WiFi network card that
+indication. In a similar manner, we collected data for the WiFi network card that
 was onboard to the Fit-PC2 that was used in our experiments. We observed a
 fairly expected distribution of RSSI measurements over distance for the ZigBee
 modules. The measurements taken showed an unrealistic path loss exponent of 1.07
@@ -175,7 +175,7 @@ assigned to Seng Jea who was responsible for the team schedule as well as the
 meetings with Prof. Hailes.
 
 The team dynamics enabled us to pursue such a wide scoped project. That being
-said specific limitations of our team management strategy crept in during our
+said, specific limitations of our team management strategy crept in during our
 project. One of these limitations we faced, was what resulted in this project
 becoming so widely scoped. For example, the fact that we did not keep a stricter
 Changelog turned out to hinder the evaluation of our progress during this
@@ -212,7 +212,7 @@ beginning of the project I enthusiastically began the setup of the simulation
 framework that we were assigned to develop upon. Following that, I engaged with
 setting up a constant integration server for our project, at which I was
 unsuccessful due to specific requirements of the framework not being available
-within online services. Subsequently I focused on understanding the platforms
+within online services. Subsequently, I focused on understanding the platforms
 that we were planning to use for our experiments. I was assigned with the task
 of understanding what information were we able to extract from them and identify
 the optimal method to gather these data. This task proved to be hindered by the
