@@ -28,7 +28,7 @@ order to collect useful information. These are low cost devices with limitations
 in their capabilities. One of these limitations is the communication range. As a
 result it is understood that these networks are not always connected. A concept
 to overcome such difficulties is the use of data mules that visit these devices
-and collet the data from them. These data mules are networked devices that are
+and collect the data from them. These data mules are networked devices that are
 able to move from location to location, pick up the data, store them
 temporarily and then deliver them back to the base. An interesting area is the
 exploration of data muling with the use of Unmanned Aerial Vehicles (UAVs).
@@ -39,29 +39,52 @@ Since the suitability of UAVs for the task is established we move to the
 implementation. In order to ensure that UAVs behave in a safe manner thorough
 testing is required. However this is not always possible due to weather
 conditions. Another factor that increases the risk significantly in this
-researh area is the cost of the UAVs the nearby environment. The high cost
-makes field testing unsuitable for this researh area. As a consequence the
-researh has foused on simulating UAVs in order to reduce the risk mentioned
+research area is the cost of the UAVs the nearby environment. The high cost
+makes field testing unsuitable for this research area. As a consequence the
+research has focused on simulating UAVs in order to reduce the risk mentioned
 above.
 
 The initial idea for this project was the exploration of path planning
 algorithms for UAVs when they are used to collect data from distributed wireless
-sensor networks. Due to the limitations and risk involved in suh a projet if it
+sensor networks. Due to the limitations and risk involved in such a project if it
 is taken on the field the exploration was limited to a simulated environment.
 After researching the area we focused on a simulator that enables the physical
 simulation of UAVs. CRATES was the simulator we used for this project which
 lacked support for modeling the wireless channel.
 
-We identified the areas where the projet would contribute to. This project set
+We identified the areas where the project would contribute to. This project set
 to build a radio propagation model for CRATES and utilise this in order to
 explore higher level Path Planning Algorithms. These were to be evaluated on
-their performance based on distance and data colletion statistics.
-
+their performance based on distance and data collection statistics.
 
 
 \section{Objectives and Achievements}
 One of the most challenging aspects of this project has been it's wide scope. It
-is in effect a multi disciplinary project.
+is in effect a multi disciplinary project. The main objectives were the
+extension of CRATES in order to support wireless communication as well as
+the implementation and testing of path planning algorithms. However, these two
+main objectives were divided into multiple milestones along the progress of the
+project.
+
+\subsection{Wireless Channel Modeling}
+Taking into account the project outline one of the first milestones along the
+timeline was the Modeling of the wireless channel in CRATES. This task was split
+into two main subgoals. Firstly we had to comprehend how CRATES operated and how
+it would be best to implement the desired functionality. In parallel we were to
+research on how to model the wireless channel.
+
+CRATES supports wireless sensors however, it is limited because it offers no
+communication model. In order to add support for the communication model we
+extended CRATES and enabled the models inside the simulated world to pass
+messages from one to another. These communiation primitives were to be enriched
+with a realistic radio model that would control the radio propagation method.
+Since we required a detailed wireless communication simulation,
+
+
+
+
+
+
 
 
 your own understanding of the project objectives and main achievements;
