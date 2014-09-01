@@ -76,30 +76,30 @@ research on how to model the wireless channel.
 CRATES supports wireless sensors however, it is limited because it offers no
 communication model. In order to add support for the communication model we
 extended CRATES and enabled the models inside the simulated world to pass
-messages from one to another. These communiation primitives were to be enriched
+messages from one to another. These communication primitives were to be enriched
 with a realistic radio model that would control the radio propagation method.
 Since we required a detailed wireless communication simulation, it was
 essential to simulate not only the raw wireless channel, but also the network
 stack layers up to the internet protocol.
 
 In order to simulate the network stack layers we reused existing code. In
-particular we used ns2, a disrete event simulator, that executes TCL scripts at
-runtime. ns2 is a widely used simulator in researh areas and supports multiple
+particular we used ns2, a discrete event simulator, that executes TCL scripts at
+runtime. ns2 is a widely used simulator in research areas and supports multiple
 MAC layers. Alternatives to ns2 were considered, however, due to our previous
 familiarity with ns2 was what led us to use ns2 for our project. In our
 implementation we run two simulators in parallel. We treat the ns2 simulation
-as a funtion call, pushing the input, waiting for a fixed amount of time and
+as a function call, pushing the input, waiting for a fixed amount of time and
 then parsing the result.
 
 In the area of wireless modeling we had to gather data for the network modules
 that were available on the real life platforms. To do that we created a
 measurement platform using OrisenStamps and NVO8C GPS units that allowed us to
 measure wireless data as well as GPS coordinates. This way we could calculate
-the distanes between the different platforms. These platforms were flown in the
+the distances between the different platforms. These platforms were flown in the
 air by two UAVs in order to gather the required data. The OrisenStamps are
-equiped with ZigBee 802.15.4 transievers which we used to gather the ZigBee
+equipped with ZigBee 802.15.4 transceivers which we used to gather the ZigBee
 experiment data set. We also gathered data for the WiFi channel. For the WiFi
-measurements we used the onboard 802.11g WiFi mdules that are onboard the
+measurements we used the onboard 802.11g WiFi modules that are onboard the
 Fit-PC2 platforms which were also attached to the UAVs.
 
 \subsection{Path Planning}
@@ -107,7 +107,7 @@ The second main goal for our project has been the exploration of path planning
 algorithms. We focused on two main algorithms; one based on Sugihara's path
 planning algorithm and a modified genetic algorithm. These two algorithms are
 tested and their performance is compared on the basis of total distance
-travelled by the UAVs and the amount of data colleted.
+travelled by the UAVs and the amount of data collected.
 
 \section{Project Results}
 In this section of the report we will discuss the output of the project on the
@@ -115,39 +115,49 @@ goals set in radio modeling, the simulator plugin and the path planning
 algorithms.
 
 \subsection{Radio Modeling}
-In the area of radio modeling we set a goal for accuratey simulating the
+In the area of radio modeling we set a goal for accurately simulating the
 wireless channel. In order to achieve this goal, initially we gathered wireless
-communication data for two different MAC protools, ZigBee 802.15.4 and WiFi
-802.11g.
-\subsubsection{ZigBee}
-For the ZigBee measurements we used a pair of OrisenStamps whih exchainged
-packets. From these packets we extracted the receiver signal strangth
-indication.
-\subsubsection{WiFi}
+communication data for two different MAC protocols, ZigBee 802.15.4 and WiFi
+802.11g. For the ZigBee measurements we used a pair of OrisenStamps which exchanged
+packets. From these packets we extracted the receiver signal strength
+indication. In a similar manner we collected data for the WiFi network card that
+was onboard to the Fit-PC2 that was used in our experiments. We observed a
+fairly expected distribution of RSSI measurements over distance for the ZigBee
+modules. The measurements taken showed an unrealistic path loss exponent of 1.07
+whereas for the WiFi the exponent was about 1.41. These values are most likely
+attributed to the unknown methods of the calculation of the RSSI values both by
+the ZigBee and the WiFi modules. Moreover, for the WiFi measurements, another
+possible explanation would be the limitations that were imposed on the allowed
+flight distance and the coding scheme changes of the 802.11g MAC layer.
 \subsection{Simulator Plugin}
+The main software component of this project was the simulator plugin. This
+enables the simulation of the wireless channel in CRATES. It provides the
+required functionality and when compared with the real life measurements we
+gathered it showed minimal discrepancy.
 \subsection{Path Planning}
-a critical assessment of the project results (e.g., how do you judge the
-quality of the final result, what were the important technical decisions
-this project, what worked well, what decisions you would change in the light
-of experience, etc.);
+The final milestone of the project was the exploration of the two path planning
+algorithms. Both Sugihara's algorithm and the optimized genetic algorithm were
+implemented and compared on the basis of distance travelled by the UAVs. It can
+be seen as in the group report that the optimized algorithm saves more distance
+as the number of nodes increases.
 
 \section{Project Management}
 An important part of the project has been the project management aspect. Since
 this was an exploration project with multiple milestones we required flexibility
 in the goals that we set for every week. We kept the meetings informal where we
 exchanged information so that everyone is always up to date. Moreover we aimed
-to work often in the same space to keep everyone motivated and our produtivity
-high. When that was not possible we tried to have a constant online presense
-that enabled our group to exchainge ideas and troubleshoot in a very agile
+to work often in the same space to keep everyone motivated and our productivity
+high. When that was not possible we tried to have a constant online presence
+that enabled our group to exchange ideas and troubleshoot in a very agile
 manner.
 
-Throughout the projet we had a very versatile and flexible organisation that
+Throughout the project we had a very versatile and flexible organisation that
 enabled members to pick up tasks that were more fitting to their interest and
 skillset. In order to keep track we used a number of tools. One of the main
 techniques we applied was the use of the Human Changelog where all tasks and
 their progress were recorded for everyone to see and update. In addition we used
 Trello to manage our tasks, which seemed promising in the beginning however it
-proved a burder instead because we were already using the Human Changelog.
+proved a burden instead because we were already using the Human Changelog.
 
 An important part of this project has been software development. To be exact it
 has been a choir of multiple smaller software projects. In order to cope with
