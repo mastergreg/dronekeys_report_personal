@@ -78,18 +78,34 @@ communication model. In order to add support for the communication model we
 extended CRATES and enabled the models inside the simulated world to pass
 messages from one to another. These communiation primitives were to be enriched
 with a realistic radio model that would control the radio propagation method.
-Since we required a detailed wireless communication simulation,
+Since we required a detailed wireless communication simulation, it was
+essential to simulate not only the raw wireless channel, but also the network
+stack layers up to the internet protocol.
 
+In order to simulate the network stack layers we reused existing code. In
+particular we used ns2, a disrete event simulator, that executes TCL scripts at
+runtime. ns2 is a widely used simulator in researh areas and supports multiple
+MAC layers. Alternatives to ns2 were considered, however, due to our previous
+familiarity with ns2 was what led us to use ns2 for our project. In our
+implementation we run two simulators in parallel. We treat the ns2 simulation
+as a funtion call, pushing the input, waiting for a fixed amount of time and
+then parsing the result.
 
+In the area of wireless modeling we had to gather data for the network modules
+that were available on the real life platforms. To do that we created a
+measurement platform using OrisenStamps and NVO8C GPS units that allowed us to
+measure wireless data as well as GPS coordinates. This way we could calculate
+the distanes between the different platforms.
 
-
-
-
-
-
-your own understanding of the project objectives and main achievements;
+\subsection{Path Planning}
+The second main goal for our project has been the exploration of path planning
+algorithms. We focused on two main algorithms; one based on Sugihara's path
+planning algorithm and a modified genetic algorithm. These two algorithms are
+tested and their performance is compared on the basis of total distance
+travelled by the UAVs and the amount of data colleted.
 
 \section{Project Results}
+In this section of the report
 \subsection{Radio Modeling}
 \subsubsection{ZigBee}
 \subsubsection{WiFi}
