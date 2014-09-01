@@ -95,7 +95,12 @@ In the area of wireless modeling we had to gather data for the network modules
 that were available on the real life platforms. To do that we created a
 measurement platform using OrisenStamps and NVO8C GPS units that allowed us to
 measure wireless data as well as GPS coordinates. This way we could calculate
-the distanes between the different platforms.
+the distanes between the different platforms. These platforms were flown in the
+air by two UAVs in order to gather the required data. The OrisenStamps are
+equiped with ZigBee 802.15.4 transievers which we used to gather the ZigBee
+experiment data set. We also gathered data for the WiFi channel. For the WiFi
+measurements we used the onboard 802.11g WiFi mdules that are onboard the
+Fit-PC2 platforms which were also attached to the UAVs.
 
 \subsection{Path Planning}
 The second main goal for our project has been the exploration of path planning
@@ -105,9 +110,19 @@ tested and their performance is compared on the basis of total distance
 travelled by the UAVs and the amount of data colleted.
 
 \section{Project Results}
-In this section of the report
+In this section of the report we will discuss the output of the project on the
+goals set in radio modeling, the simulator plugin and the path planning
+algorithms.
+
 \subsection{Radio Modeling}
+In the area of radio modeling we set a goal for accuratey simulating the
+wireless channel. In order to achieve this goal, initially we gathered wireless
+communication data for two different MAC protools, ZigBee 802.15.4 and WiFi
+802.11g.
 \subsubsection{ZigBee}
+For the ZigBee measurements we used a pair of OrisenStamps whih exchainged
+packets. From these packets we extracted the receiver signal strangth
+indication.
 \subsubsection{WiFi}
 \subsection{Simulator Plugin}
 \subsection{Path Planning}
@@ -117,26 +132,89 @@ this project, what worked well, what decisions you would change in the light
 of experience, etc.);
 
 \section{Project Management}
-a critical assessment of the project management techniques used (e.g.,
-whether you followed standard software engineering processes, and if so then
-how well they worked or didn't work);
+An important part of the project has been the project management aspect. Since
+this was an exploration project with multiple milestones we required flexibility
+in the goals that we set for every week. We kept the meetings informal where we
+exchanged information so that everyone is always up to date. Moreover we aimed
+to work often in the same space to keep everyone motivated and our produtivity
+high. When that was not possible we tried to have a constant online presense
+that enabled our group to exchainge ideas and troubleshoot in a very agile
+manner.
 
-a discussion and critical assessment of how well the team and each of its
-members worked from your point-of-view (e.g., whether decisions were
-adequately agreed, specified and documented, or had to be revised later,
-whether the work was appropriately split among team members);
+Throughout the projet we had a very versatile and flexible organisation that
+enabled members to pick up tasks that were more fitting to their interest and
+skillset. In order to keep track we used a number of tools. One of the main
+techniques we applied was the use of the Human Changelog where all tasks and
+their progress were recorded for everyone to see and update. In addition we used
+Trello to manage our tasks, which seemed promising in the beginning however it
+proved a burder instead because we were already using the Human Changelog.
 
-a description and critical assessment of your own workplan and contribution
-to the project (e.g., what aspects of the project did you contribute most
-to; whether you were over-worked or under-worked; whether you as an
-individual could have achieved more with different approaches and/or
-organisation).
-
-In the Individual report, you may make reference to the submitted Group
-documents for further detail, but the report should stand on its own.
-
-Note that the Individual report is only made available to the Examiners and will
-not be seen by any other students.
+An important part of this project has been software development. To be exact it
+has been a choir of multiple smaller software projects. In order to cope with
+the management of the codebase we used a distributed version control system that
+allowed everyone to contribute to the task at hand. This was very helpful,
+especcially when we were debugging as we were able to push and pull changes
+between our members with ease.
 
 
+\subsection{Team Management}
+This project took place in a highly dynamic team. We established our interests
+since the beginning of the project and these were the main compass on how the
+tasks were distributed to the members. The role of the Project Manager was
+assigned to Seng Jea who was responsible for the team schedule as well as the
+meetings with Prof. Hailes.
+
+The team dynamics enabled us to pursue such a wide scoped project. That being
+said specific limitations of our team management strategy crept in during our
+project. One of these limitations we faced, was what resulted in this project
+becoming so widely scoped. For example, the fact that we did not keep a stricter
+Changelog turned out to hinder the evaluation of our progress during this
+project. Moreover, for the same reason, we did not have deliverables to present
+on a weekly basis as the task fragmentation was rather coarse grained. Overall
+the team worked well as a whole, each member using their strengths and
+complementing other members skills.
+
+\subsubsection{Seng Jea Lee}
+Seng Jea was assigned the role of the Project Manager. He has showed deep
+analytical skills and profound understanding of the field of wireless modeling.
+He shows extreme attention to detail and professionalism. In his role as a
+Project Manager he kept everyone motivated and in line with the requirements of
+the task at hand.
+
+\subsubsection{Johann Mifsud}
+Johann is an experienced Software Engineer with a strong background. He
+has produced high quality deliverrables adherring to deadlines set by the team.
+He is hard working and dependable.
+
+\subsubsection{Minmin Zhang}
+Minmin is a very knowledgable and very hard working individual. Her work on the
+research area of the project was of remarkable quality and depth. Moreover she
+did not set aside the task of implementing the path planning algorithms despite
+their complexity. That being said it would seem that Minmin was often shy to
+ask for help during the project.
+
+In the long run, in my opinion the tasks were fairly evenly distributed among
+the members of the team.
+
+\subsubsection{Personal Workplan}
+Throughout this project I engaged with a number of diverse tasks. In the
+beginning of the project I enthusiastically began the setup of the simulation
+framework that we were assigned to develop upon. Following that, I engaged with
+setting up a constant integration server for our project, at which I was
+unsuccessful due to specific requirements of the framework not being available
+within online services. Subsequently I focused on understanding the platforms
+that we were planning to use for our experiments. I was assigned with the task
+of understanding what information were we able to extract from them and identify
+the optimal method to gather these data. This task proved to be hindered by the
+fact that the manual for the Fit-PC2 platform was unavailable to us. Finally, I
+was assigned with the task of gathering the data, a process that involved fully
+understanding the platforms, resolving issues such as failed chips and multiple
+trips to RVC. During the final phase of the project I was assigned with my share
+of the Group Report. Due to some unexpected bugs to our CRATES plugin, I also
+undertook the task of debugging the plugin.
+
+Overall, I consider my contribution was commensurate to my abilities and has
+positively complemented the efforts put by the other members in this project. I
+was assigned many diverse tasks that provided me a complete overview of the
+project and stimulated by attention and enthusiasm.
 \end{document}
